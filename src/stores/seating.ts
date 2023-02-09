@@ -4,8 +4,10 @@ import type { Guest } from "@/types";
 
 export const guestAndSeatingStore = defineStore("guestAndSeating", () => {
   const guests: Ref<Guest[]> = ref(generateGuests());
+
   const seatGraph: Ref<any[]> = ref(
     Array(10)
+      // @ts-ignore
       .fill()
       .map(() => Array(10).fill("X"))
   );
@@ -148,6 +150,7 @@ export const guestAndSeatingStore = defineStore("guestAndSeating", () => {
       let seated = false;
       for (let row = 0; row < seatGraph.value.length; row++) {
         if (
+          // @ts-ignore
           seatGraph.value[row].filter((seat) => seat === "X").length >=
           guest.guests
         ) {

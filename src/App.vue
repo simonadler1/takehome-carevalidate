@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router";
 for (let i = 0; i < 5; i++) {
-  localStorage.setItem(i, `package_${i}`);
+  localStorage.setItem(String(i), `package_${i}`);
 }
 </script>
 
