@@ -6,7 +6,7 @@ import { useRoute } from "vue-router";
 const store = guestAndSeatingStore();
 let { guests } = storeToRefs(store);
 const route = useRoute();
-const id = route.params.id;
+const id: any = route.params.id;
 const packagename = computed(() => {
   return localStorage.getItem(String(guests.value[id].package));
 });

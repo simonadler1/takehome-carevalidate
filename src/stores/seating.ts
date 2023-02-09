@@ -132,7 +132,7 @@ export const guestAndSeatingStore = defineStore("guestAndSeating", () => {
     return guests;
   }
   function seatGuests() {
-    const alphabet = {
+    const alphabet: any = {
       0: "A",
       1: "B",
       2: "C",
